@@ -1,0 +1,30 @@
+.content{
+
+    max-width: 80rem;
+    min-width: 50rem;
+}
+
+.content img{
+    width: 100%;
+
+}
+
+.content2 img{
+
+    width: 100%;
+    float: left;
+
+}
+
+.content2 {
+max-width: 20rem;
+min-width: 10rem;
+padding: 1rem;
+}
+
+.contentContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+
+}

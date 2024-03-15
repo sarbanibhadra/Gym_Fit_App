@@ -1,0 +1,29 @@
+.navbar {
+    background-color: #b2a8a8;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid black;
+   }
+   
+   .navbar-brand {
+    margin-right: auto;
+   }
+
+   .navbar-start{
+
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+   }
+   
+   .navbar-item {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+   }
+   
+   .navbar-item:hover {
+    color: #ddd;
+}
