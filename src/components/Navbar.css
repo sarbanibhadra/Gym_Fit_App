@@ -1,15 +1,17 @@
 .navbar {
-    background-color: #b2a8a8;
+    background-color:rgb(112, 112, 112);
     color: white;
     padding: 10px;
     display: flex;
     justify-content: space-between;
-    border: 1px solid black;
    }
    
    .navbar-brand {
     margin-right: auto;
+    border:solid black;
+    color:rgb(28, 52, 4);
    }
+
 
    .navbar-start{
 
@@ -22,8 +24,9 @@
     color: white;
     text-decoration: none;
     margin-right: 15px;
+    padding-left: 1rem;
    }
    
    .navbar-item:hover {
-    color: #ddd;
+    color: lightblue;
 }
