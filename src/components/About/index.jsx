@@ -9,7 +9,7 @@ const About = () => {
             <img src= {image1} alt="" />
         </div>
         <div className='content2'>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid dolorum corporis assumenda et! Quibusdam, laborum? A adipisci pariatur totam provident quas? Assumenda aperiam sed neque nisi, earum perspiciatis provident asperiores!</p>    
+        <p>What motivates each of us to work out is different: maybe it's a health problem, an issue with sleep, a special event you want to look great for, having more energy to play with your kids or grandkids, or simply wanting to feel better and healthier in your own skin.We are here for you!</p>    
             <img src={Logo} alt="" />
         </div>
     </div>

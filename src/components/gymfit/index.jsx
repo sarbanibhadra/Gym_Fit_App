@@ -11,7 +11,7 @@ export const Description = () => {
             <img src={mainpic} alt="" />
         </div>
         <div className='content'>
-            <p>GYM FIT APPLICATION .</p>
+            <p>Our main goal is making people feel better and healtier.</p>
         </div>
     </div>
   )}
