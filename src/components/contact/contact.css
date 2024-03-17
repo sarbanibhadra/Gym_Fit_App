@@ -2,14 +2,12 @@
 #root{
     width: 100%;
 }
-form{
-    width: 80%;
-}
+
 html, body{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     background-color: #F9EFEF;
 }
 a, p, h1,h2,h3,h4,h5,h6,div{
@@ -17,17 +15,26 @@ a, p, h1,h2,h3,h4,h5,h6,div{
     text-decoration: none;
     padding: 0;
 }
-.white-background{background-color: white;}
-input,textarea{background-color: inherit;}
+p{
+    font-family: "Eczar", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.flex{display: flex;}
+.justify-center{justify-content: center;}
+.align-center{align-items: center;}
+.background{background-color: rgb(0, 0, 0);}
+input,textarea{background-color: inherit; color: inherit;}
 .contact-container{
     width: 100%;
     max-height: 550px;
     height: 550px;
 }
-.flex{display: flex;}
-.justify-center{justify-content: center;}
-.align-center{align-items: center;}
-.block{display: block;}
+form{
+    width: 100%;
+    border-radius: 1.2rem;
+ }
 .contact-left-dev{
     width: 60%;
     height: 100%;
@@ -39,22 +46,15 @@ input,textarea{background-color: inherit;}
     width: 40%;
     height: 100%;
 }
-.contact-image{height:100%; width: 100%;}
+.contact-image{height:100%; width: 100%;  border-radius: 1.2rem;}
 .get-in-touch-contact{
     padding-bottom: 0.1rem;
     font-family: "Girassol", serif;
     font-weight: 700;
       
 }
-p{
-    font-family: "Eczar", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-.form-inputs-div-container{
-    width: 100%;
-}
+
+.form-inputs-div-container{width: 100%;}
 
 .form-input-div{
     display: flex; 
@@ -91,7 +91,7 @@ p{
 }
 
 .submit{
-    margin-top: 1rem;
+    width: 52%;
     font-family: "Girassol", serif;
     font-weight: 700;
     font-size: 1.2rem;
@@ -102,8 +102,24 @@ p{
 }
 
 
+
 /* Mobile Responsive */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 800px){
     .flex{flex-direction: column;}
+    form{width: 100%;}
+    .contact-left-dev{width: 100%;}
+    .contact-container{
+        width: 100%;
+        max-height: fit-content;
+        height: fit-content;
+    }
+    .form-image-div{
+        width: 450px;
+        height: 600px;
+        margin: 0 auto;
+    }
+    .contact-image{height:100%; width: 100%;}
+    .input-fields{width: 80%;}
+    .submit{width: 81%;}
 }
     

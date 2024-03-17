@@ -6,20 +6,20 @@ export default function Contact(){
     return(
         <>
             <div className='flex justify-center contact-container'>
-                <form className='flex white-background'>
+                <form className='flex background'>
                     <div className='contact-left-dev flex'>
                         <h1 className='get-in-touch-contact'>Get in touch 👋</h1>
                         <div className='form-inputs-div-container'>
                             {/* Name */}
                             <div className='form-input-div'>
                                 <label className='label' htmlFor="name">Name</label>
-                                <input className='input-fields' type="text" name='name' placeholder='Enter your name' />
+                                <input className='input-fields input-height' type="text" name='name' placeholder='Enter your name' />
                             </div>
 
                             {/* Phone */}
                             <div className='form-input-div'>
                                 <label className='label' htmlFor="phone">Phone</label>
-                                <input className='input-fields' type="number" name='phone' placeholder='Enter your phone' />
+                                <input className='input-fields input-height' type="number" name='phone' placeholder='Enter your phone' />
                             </div>
 
                             {/* Email */}
