@@ -11,12 +11,20 @@ import image8 from "../../assets/images/img8.jpg"
 import image9 from "../../assets/images/img9.jpg"
 import Logo from "../../assets/images/Shape-3.svg"
 const About = () => {
+  const handleButtonClick = () => {
+    console.log('Button clicked');
+    // Add your logic here for what should happen when the button is clicked
+ };
   return (
     <div className='contentContainer'>
         <div className='content'>
             <img src= {image1} alt="" className="hover-image"/>
         </div>
         <div className='content2'>
+        <button onClick={handleButtonClick} className="my-button hover-button">
+ METRICS
+</button>
+
         <p>Take your fitness journey to the next level!</p>
         <p>Get Ready to sweat, challenge yourself and transform your body!</p>    
             {/* <img src={Logo} alt="" /> */}
