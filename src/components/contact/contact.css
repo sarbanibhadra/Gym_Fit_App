@@ -1,14 +1,109 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 *{box-sizing: border-box;}
+#root{
+    width: 100%;
+}
+form{
+    width: 80%;
+}
 html, body{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    background-color: #F9EFEF;
 }
-a{
+a, p, h1,h2,h3,h4,h5,h6,div{
     color: inherit;
     text-decoration: none;
+    padding: 0;
 }
+.white-background{background-color: white;}
+input,textarea{background-color: inherit;}
+.contact-container{
+    width: 100%;
+    max-height: 550px;
+    height: 550px;
+}
+.flex{display: flex;}
+.justify-center{justify-content: center;}
+.align-center{align-items: center;}
+.block{display: block;}
+.contact-left-dev{
+    width: 60%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+}
+.form-image-div{
+    width: 40%;
+    height: 100%;
+}
+.contact-image{height:100%; width: 100%;}
+.get-in-touch-contact{
+    padding-bottom: 0.1rem;
+    font-family: "Girassol", serif;
+    font-weight: 700;
+      
+}
+p{
+    font-family: "Eczar", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.form-inputs-div-container{
+    width: 100%;
+}
+
+.form-input-div{
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-input-div:nth-last-of-type(2){
+    height: 150px;
+    max-height: 150px;
+}
+
+.label{
+    font-family: "Eczar", serif;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.input-fields{
+    width: 50%;
+    border: 2px solid;
+    border-color: gray;
+    border-radius: 0.2rem;
+}
+.input-height{
+    max-height: 2.1rem;
+    height: 2rem;
+}
+
+.input-fields:focus{
+    outline: none !important;
+    border-color: green;
+    /* box-shadow: 0 0 10px #719ECE */
+}
+
+.submit{
+    margin-top: 1rem;
+    font-family: "Girassol", serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    border-radius: 1.4rem;
+    padding-bottom: 0.7rem;
+    padding-top: 0.5rem;
+}
+
+
+/* Mobile Responsive */
+@media only screen and (max-width: 700px){
+    .flex{flex-direction: column;}
+}
+    
