@@ -49,54 +49,54 @@ p {
 
    .footer {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column; 
+    align-items: center; 
     padding: 20px;
     background-color: #333;
     color: white;
 }
 
 .footer-menu {
-    display: flex; /* Arrange items in a row */
-    justify-content: space-between; /* Space items evenly */
-    width: 100%; /* Ensure the menu takes up the full width */
+    display: flex;
+    justify-content: space-between; 
+    width: 100%; 
 }
 
 .company, .contactUs, .subscribe {
     display: flex;
-    /* Add any specific styles for these sections here */
+   
 }
 
 .social-media {
-    display: flex; /* Arrange social media icons in a row */
-    justify-content: center; /* Center the icons */
-    width: 100%; /* Ensure the social media section takes up the full width */
+    display: flex; 
+    justify-content: center; 
+    width: 100%; 
 }
 
 .copyright {
-    text-align: center; /* Center the copyright text */
-    width: 100%; /* Ensure the copyright text takes up the full width */
+    text-align: center; 
+    width: 100%; 
 }
 
 .image-flex {
     display: flex;
-    flex-wrap: wrap; /* Allows the items to wrap onto multiple lines */
-    justify-content: space-between; /* Adds some space between the items */
+    flex-wrap: wrap;
+    justify-content: space-between; 
 }
 
 .image-flex img {
-    flex: 1 0 20%; /* Each image will take up 20% of the container's width */
-    margin: 5px; /* Adds some margin around the images */
+    flex: 1 0 20%; 
+    margin: 5px; 
     width: 20%;
 }
 
 .hover-image {
-    transition: all 0.3s ease; /* Smooth transition effect */
+    transition: all 0.3s ease; 
 }
 
 .hover-image:hover {
-    opacity: 0.7; /* Reduce opacity on hover */
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    opacity: 0.7; 
+    transform: scale(1.1); 
 }
 
 .hover-button {
@@ -105,12 +105,12 @@ p {
     padding: 15px 40px;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease; /* Smooth transition effect */
+    transition: all 0.3s ease; 
    }
    
    .hover-button:hover {
-    background-color: white; /* Change the background color on hover */
-    color: black; /* Change the text color on hover */
+    background-color: white; 
+    color: black; 
    }
 
   

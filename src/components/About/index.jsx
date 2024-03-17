@@ -13,7 +13,7 @@ import Logo from "../../assets/images/Shape-3.svg"
 const About = () => {
   const handleButtonClick = () => {
     console.log('Button clicked');
-    // Add your logic here for what should happen when the button is clicked
+  
  };
   return (
     <div className='contentContainer'>
