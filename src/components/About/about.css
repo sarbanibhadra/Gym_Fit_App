@@ -45,6 +45,7 @@ p {
     text-transform: capitalize;
     padding-top: 8rem;
     padding-bottom: 4rem;
+    background-color:white;
    }
 
    .footer {
@@ -113,4 +114,12 @@ p {
     color: black; 
    }
 
-  
+.descriptioncontainer{
+
+    background-color: white;
+}
+
+.imagecontainer{
+    color: black;
+    text-align: center;
+}

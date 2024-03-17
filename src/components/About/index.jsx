@@ -27,7 +27,6 @@ const About = () => {
 
         <p>Take your fitness journey to the next level!</p>
         <p>Get Ready to sweat, challenge yourself and transform your body!</p>    
-            {/* <img src={Logo} alt="" /> */}
         </div>
         <div className="image-flex">
         <img src={image2} alt="Image 2" className="hover-image" />
