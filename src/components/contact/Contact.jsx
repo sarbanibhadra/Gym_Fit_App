@@ -1,8 +1,16 @@
 import './contact.css'
 import contactImg from '../../assets/images/anastase-maragos-ehQimz6-1qM-unsplash.jpg'
-
+import { useFormik } from 'formik'
 export default function Contact(){
-
+    // Formik login here
+    const formik = useFormik({
+        initialValues: {
+            name: "",
+            phone:"",
+            email:"",
+            message:"",
+        },
+    });
     return(
         <>
             <div className='flex justify-center contact-container'>
