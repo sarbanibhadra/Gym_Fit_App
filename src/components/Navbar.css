@@ -1,0 +1,38 @@
+.navbar {
+    background-color:rgb(176, 176, 176);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+   }
+   
+   .navbar-brand {
+    margin-right: auto;
+    border:solid black;
+    background-color: green;
+    color:rgb(28, 52, 4);
+   }
+
+
+   .navbar-start{
+
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+   }
+   
+   .navbar-item {
+    color: rgb(3, 3, 3);
+    text-decoration: none;
+    margin-right: 15px;
+    padding-left: 1rem;
+   }
+   
+   .navbar-item:hover {
+    color: lightblue;
+}
+
+.contentContainer{
+    background-color: white;
+}
+
