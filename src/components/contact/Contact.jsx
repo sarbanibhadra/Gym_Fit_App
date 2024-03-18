@@ -1,8 +1,14 @@
 import './contact.css'
 import contactImg from '../../assets/images/anastase-maragos-ehQimz6-1qM-unsplash.jpg'
+import { useNavigate, createSearchParams } from 'react-router-dom';
+import { useState } from 'react';
 import { useFormik } from 'formik'
 import * as Yup from "yup";
 export default function Contact(){
+    const navigate = useNavigate();
+    // let [searchParams, setSearchParams] = useSearchParams();
+    // const q = searchParams.get('q');
+    // const lang = searchParams.get('lang')
     // Formik login here
     const formik = useFormik({
         initialValues: {
@@ -16,10 +22,10 @@ export default function Contact(){
 
         validationSchema: Yup.object({
             name: Yup.string()
-            .max(20, 'Name must be 20 characters or less.')
+            .max(30, 'Name must be 30 characters or less.')
             .required('Name is required!'),
             phone: Yup.string()
-            .max(20, 'Phone must be 12 characters or less.')
+            .max(13, 'Phone must be 13 characters or less.')
             .required('Phone is required!'),
             email: Yup.string()
             .email('Invalid email address!')
@@ -34,6 +40,19 @@ export default function Contact(){
         // for submit form
         onSubmit: (values) =>{
             console.log(values);
+            const params = {
+                name: values.name,
+                phone: values.phone
+            };
+            const options = {
+                pathname: "/success",
+                search: (`?${createSearchParams(values)}`)
+
+            }
+            // console.log(setSearchParams);
+            navigate(options, {replace: true});
+
+            
         },
     });
     // console.log(formik.values);

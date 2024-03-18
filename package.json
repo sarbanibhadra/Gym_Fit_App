@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "formik": "^2.4.5",
+    "localforage": "^1.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
     "yup": "^1.4.0"
   },
   "devDependencies": {

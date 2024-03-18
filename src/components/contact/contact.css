@@ -108,6 +108,15 @@ form{
     border-color: green;
 }
 
+/* Success Page */
+.success-container{
+    height: 30%;
+    width: 100%;
+    border-radius: 1rem;
+
+}
+.flex-wrap{flex-wrap: wrap;}
+
 
 
 /* Mobile Responsive */
