@@ -25,6 +25,7 @@ p{
 .justify-center{justify-content: center;}
 .align-center{align-items: center;}
 .background{background-color: rgb(0, 0, 0);}
+.text-red{color: rgb(150, 50, 50);}
 input,textarea{background-color: inherit; color: inherit;}
 .contact-container{
     width: 100%;
