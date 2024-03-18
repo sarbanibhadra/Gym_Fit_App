@@ -116,7 +116,9 @@ form{
 
 }
 .flex-wrap{flex-wrap: wrap;}
-
+.red{color: rgb(200, 50, 20);}
+.hidden{background-color: black;}
+.visible{background-color: aqua;}
 
 
 /* Mobile Responsive */

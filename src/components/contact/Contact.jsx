@@ -4,10 +4,11 @@ import { useNavigate, createSearchParams } from 'react-router-dom';
 import { useState } from 'react';
 import { useFormik } from 'formik'
 import * as Yup from "yup";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
 export default function Contact(){
     const navigate = useNavigate();
-    // let [searchParams, setSearchParams] = useSearchParams();
-    // const q = searchParams.get('q');
+    const form = useRef();
     // const lang = searchParams.get('lang')
     // Formik login here
     const formik = useFormik({
@@ -51,15 +52,25 @@ export default function Contact(){
             }
             // console.log(setSearchParams);
             navigate(options, {replace: true});
-
-            
+            emailjs
+            .sendForm('service_c6zen3o', 'template_r47l60d',form.current, {
+                publicKey: '7XUholajTP40UFCZR',
+            })
+            .then(
+                () => {
+                    console.log("Success")
+                },
+                (error) =>{
+                    console.log('Failed...', error.text);
+                },
+            );
         },
     });
     // console.log(formik.values);
     return(
         <>
             <div className='flex justify-center contact-container'>
-                <form onSubmit={formik.handleSubmit} className='flex background'>
+                <form ref={form} onSubmit={formik.handleSubmit} className='flex background'>
                     <div className='contact-left-dev flex'>
                         <h1 className='get-in-touch-contact'>Get in touch 👋</h1>
                         <div className='form-inputs-div-container'>
