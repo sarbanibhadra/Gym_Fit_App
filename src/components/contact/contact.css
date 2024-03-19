@@ -102,6 +102,7 @@ form{
     padding-top: 0.5rem;
 }
 
+/* Submit */
 .submit:hover{
     background-color: green;
     color: rgb(0, 0, 0);
