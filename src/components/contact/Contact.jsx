@@ -1,7 +1,6 @@
 import './contact.css'
 import contactImg from '../../assets/images/anastase-maragos-ehQimz6-1qM-unsplash.jpg'
 import { useNavigate, createSearchParams } from 'react-router-dom';
-import { useState } from 'react';
 import { useFormik } from 'formik'
 import * as Yup from "yup";
 import React, { useRef } from 'react';
@@ -9,7 +8,7 @@ import emailjs from '@emailjs/browser';
 export default function Contact(){
     const navigate = useNavigate();
     const form = useRef();
-    // const lang = searchParams.get('lang')
+
     // Formik login here
     const formik = useFormik({
         initialValues: {
@@ -41,10 +40,6 @@ export default function Contact(){
         // for submit form
         onSubmit: (values) =>{
             console.log(values);
-            const params = {
-                name: values.name,
-                phone: values.phone
-            };
             const options = {
                 pathname: "/success",
                 search: (`?${createSearchParams(values)}`)
