@@ -4,8 +4,7 @@ import Navbar from "./components/Navbar.jsx"
 import Footer from "./components/Footer.jsx"
 import Contact from "./components/Contact/Contact.jsx"
 import Success from "./components/contact/Success.jsx"
-import { Description } from "./components/gymfit/index.jsx"
-import About from "./components/About/index.jsx"
+
 
 function App() {
 const router = createBrowserRouter(

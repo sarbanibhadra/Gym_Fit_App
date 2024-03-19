@@ -1,11 +1,46 @@
-# React + Vite
+# Team-Profile-Generator
 
-Yet to work on this file ....
+![License: MIT]
+ Deployed: 
+
+ Git Repo: https://github.com/sarbanibhadra/Gym_Fit_App
+
+ Netlify: 
+
+## Description
+
+This application provide you to create a Team.
+
+- Table of Content
+ * [Description](#description)
+ * [Technologies/Languages](#technologieslanguages)
+ * [Images](#images)
+ * [License](#license)
+ * [Contributing](#contributing)
+ 
+
+## Technologies/Languages
+
+- JavaScript
+- [Node.js](https://nodejs.org/)
+- NPM
+- [Inquirer](https://www.npmjs.com/package//inquirer)
+- [Jest](https://www.npmjs.com/package/jest)
+
+## Demo Photos
+
+Photos will add!!!!
 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## License
 
-Currently, two official plugins are available:
+This application has MIT License.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Contributing
+
+Marija PASTUCHOVA
+Sarbani DAS
+Sohail Shirzad
+Udayasooriyan PRABUDEVA
+Volodymyr SHTYKA
+Yusuf Sercan YILDIZ
