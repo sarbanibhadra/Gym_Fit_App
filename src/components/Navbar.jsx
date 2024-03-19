@@ -1,25 +1,37 @@
 import React from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import './Navbar.css';
+import "../styles/Navbar.css"
+import logo from "../images/Shape-1.svg"
 
 const Navbar = () => {
  return (
   <>
-    <nav className="navbar">
-      <div className="navbar-brand">
-        <Link className="navbar-item" to="/">GymFit</Link>
-      </div>
-      <div className="navbar-menu">
-        <div className="navbar-start">
-          <Link className="navbar-item" to="/gymfit">Exercises</Link>
-          <Link className="navbar-item" to="/about">BMI</Link>
-          <Link className="navbar-item" to="/description">About Us</Link>
-        </div>
-        
-      </div>        
-      
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+          <a class="navbar-brand" href="/"><img src={logo} alt="logo" width="35" class="d-inline-block align-text-center"/></a>
 
-    </nav>      
+          <a href="/" id="brandName"><span class="fw-bold">GYMFIT</span></a>
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
+              <ul class="navbar-nav">
+                  <Link class="nav-item">
+                      <a class="nav-link" aria-current="page" href="/">Exercises</a>
+                  </Link>
+                  <Link class="nav-item">
+                      <a class="nav-link" href="/">BMI</a>
+                  </Link>
+                  <Link class="nav-item">
+                      <a class="nav-link" href="/">Contact</a>
+                  </Link>
+              </ul>
+          </div>
+      </div>
+
+    </nav> 
     
     <Outlet/>
     </>
