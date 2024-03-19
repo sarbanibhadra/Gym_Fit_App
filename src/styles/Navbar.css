@@ -1,0 +1,18 @@
+.navbar a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-link { 
+    color: black;
+    
+}
+
+.nav-item a:hover {
+    color: rgb(226, 16, 16);
+
+}
+
+#brandName {
+font-size: 1.2em;
+}

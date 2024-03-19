@@ -1,0 +1,43 @@
+.footer {
+    background:black;
+    color: white;
+    padding: 30px;
+}
+
+.footer-menu .title {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.footer-menu ul li {
+    margin-bottom: 5px;
+    color: white;
+    text-decoration: none;
+    
+}
+
+.footer-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    color: rgb(242, 12, 12);
+}
+
+.subscribe input {
+    margin-top: 5px;
+    
+}
+
+.subscribe .btn {
+    margin-top: 12px;
+    
+}
+.copyright {
+    background-color: white;
+    color: black;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+}
