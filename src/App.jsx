@@ -1,32 +1,31 @@
-import { useState } from 'react'
-import './App.css'
-import Home from './components/Home';
-import Success from './components/contact/Success';
-import Contact from './components/Contact/Contact'
-import { BrowserRouter, Routes, Route,} from "react-router-dom";
+import { createBrowserRouter,createRoutesFromElements,Route,RouterProvider } from "react-router-dom"
+
+import Navbar from "./components/Navbar.jsx"
+import Footer from "./components/Footer.jsx"
+import Contact from "./components/contact/Contact.jsx"
+import Success from "./components/contact/Success.jsx"
+import { Description } from "./components/gymfit/index.jsx"
+import About from "./components/About/index.jsx"
 
 function App() {
+const router = createBrowserRouter(
+createRoutesFromElements(
+  <Route path="/" element={<Navbar/>}>
+    <Route index element={<About/>}/>
+    <Route path="/contact" element={<Contact />}/>
+    <Route path="/success" element={<Success />}/>
+    <Route path="/description" element={<Description/>}/>
+
+  </Route>
+)
+
+)
+
 
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route
-            index
-            element={<Home />}
-          />
-          <Route
-            exact
-            path='/contact'
-            element={<Contact />}
-          />
-          <Route
-            exact
-            path='/success'
-            element={<Success />}
-          />
-        </Routes>
-      </BrowserRouter>
+     <RouterProvider router={router}/>
+     <Footer/>
     </>
   )
 }
