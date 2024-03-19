@@ -1,5 +1,5 @@
 import './contact.css'
-import contactImg from '../../assets/images/anastase-maragos-ehQimz6-1qM-unsplash.jpg'
+import contactImg from '../../images/anastase-maragos-ehQimz6-1qM-unsplash.jpg'
 import { useNavigate, createSearchParams } from 'react-router-dom';
 import { useFormik } from 'formik'
 import * as Yup from "yup";
