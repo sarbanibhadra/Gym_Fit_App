@@ -11,11 +11,12 @@
     "test": "jest"
   },
   "dependencies": {
-    "axios": "^1.6.8",
-    "jest": "^29.7.0",
     "@emailjs/browser": "^4.3.3",
+    "axios": "^1.6.8",
+    "bootstrap": "^5.3.3",
     "formik": "^2.4.5",
     "framer-motion": "^11.0.14",
+    "jest": "^29.7.0",
     "localforage": "^1.10.0",
     "react": "^18.2.0",
     "react-confetti": "^6.1.0",
