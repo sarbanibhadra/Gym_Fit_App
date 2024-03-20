@@ -5,66 +5,56 @@ import Row from './Row';
 import Col from './Col';
 import Card from './Card';
 import ExerciseSearchForm from './ExerciseSearchForm';
-import ExerciseResult from './ExerciseResult';
-import API from '../utils/API';
+import SearchResults from './SearchResults';
+
+import API from '../utils/GymFitService';
+//const API = require('../utils/GymFitService');
 
 function ExerciseContainer() {
   const [searchData, setSearchData] = useState({
     search: '',
     results: [],
+    error: '',
   });
 
-  const searchExercise = (query) => {
-    API.search(query)
-      .then((res) => setSearchData({ ...searchData, results: res.data }))
-      .catch((err) => console.log(err));
-  };
-
-  const handleInputChange = (event) => {
-    const { name, value } = event.target;
-
-    setSearchData({
-      ...searchData,
-      [name]: value,
-    });
-  };
-
-  // When the form is submitted, search the OMDB API for the value of `searchData.search`
-  const handleFormSubmit = (event) => {
+  const handleInputChange = async (event) => {
     event.preventDefault();
-    searchExercise(searchData.search);
+    
+    const res = await API.searchExercises(event.target.value)
+      // .then((res) => {
+        if (res.data.status === 'error') {
+          throw new Error(res.data.message);
+        }
+        const cleanData = [];
+        for (const obj of res.data) {
+          const ress = await API.getExerciseById(obj.id)
+          cleanData.push({...obj, instructions: ress.instructions})          
+        }
+        setSearchData({ ...searchData, results: cleanData  , error: '' });
+      //   API.getExerciseById('47f7aba8-991c-44eb-86bc-5a47fba335aa')
+      //   .then((res) => {
+      //     if (res.data.status === 'error') {
+      //       throw new Error(res.data.message);
+      //     }
+          
+      //   })
+      //   .catch((err) => setSearchData({ ...searchData, error: err.message }));
+      //  })
+      // .catch((err) => setSearchData({ ...searchData, error: err.message }));
   };
 
   return (
-    <Container>
-      <Row>
-        <Col size="md-4">
-          <Card heading="Search">
-            <ExerciseSearchForm
-              value={searchData.search}
-              handleInputChange={handleInputChange}
-              handleFormSubmit={handleFormSubmit}
-            />
-          </Card>
-        </Col>
-      </Row>
-      <Row>
-        <Col size="md-8">
-          <Card
-            heading={ExerciseSearchForm.results.Title || 'Search for an Exercise to Begin'}
-          >
-            {searchData.results.xxx ? (
-              <ExerciseList
-                title={searchData.results.Title}
-                
-              />
-            ) : (
-              <h3>No Results to Display</h3>
-            )}
-          </Card>
-        </Col> 
-      </Row>
-    </Container>
+    <div>
+      <Container style={{ minHeight: '50%', minWidth: '40%'}} >
+        <h1 className="text-center">Search By Exercise</h1>
+        <ExerciseSearchForm
+          //handleFormSubmit={handleFormSubmit}
+          handleInputChange={handleInputChange}
+          exercise={searchData.exercise}
+        />
+        <SearchResults results={searchData.results} />
+      </Container>
+    </div>
   );
 }
 
