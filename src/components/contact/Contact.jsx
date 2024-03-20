@@ -64,10 +64,10 @@ export default function Contact(){
     // console.log(formik.values);
     return(
         <>
-            <div className='flex justify-center contact-container'>
-                <form ref={form} onSubmit={formik.handleSubmit} className='flex background'>
+            <div className='flex contact-container'>
+                <form ref={form} onSubmit={formik.handleSubmit} className='flex background contact-form'>
                     <div className='contact-left-dev flex'>
-                        <h1 className='get-in-touch-contact'>Get in touch 👋</h1>
+                        <h1 id='get-in-touch-contact'>Get in touch 👋</h1>
                         <div className='form-inputs-div-container'>
                             {/* Name */}
                             <div className='form-input-div'>
