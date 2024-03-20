@@ -1,4 +1,4 @@
-/* *{box-sizing: border-box;}
+*{box-sizing: border-box;}
 #root{
     width: 100%;
 }
@@ -88,7 +88,7 @@ form{
 .input-fields:focus{
     outline: none !important;
     border-color: green;
-    /* box-shadow: 0 0 10px #719ECE */
+    box-shadow: 0 0 10px #719ECE 
 }
 
 .submit{
@@ -102,7 +102,7 @@ form{
     padding-top: 0.5rem;
 }
 
-/* Submit */
+
 .submit:hover{
     background-color: green;
     color: rgb(0, 0, 0);
@@ -141,4 +141,4 @@ form{
     .input-fields{width: 80%;}
     .submit{width: 81%;}
 }
-     */
+     

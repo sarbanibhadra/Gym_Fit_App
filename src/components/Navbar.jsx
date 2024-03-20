@@ -6,26 +6,26 @@ import logo from "../images/Shape-1.svg"
 const Navbar = () => {
  return (
   <>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-      <div class="container">
-          <a class="navbar-brand" href="/"><img src={logo} alt="logo" width="35" class="d-inline-block align-text-center"/></a>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div className="container">
+          <Link className="navbar-brand" to="/"><img src={logo} alt="logo" width="35" className="d-inline-block align-text-center"/></Link>
 
-          <a href="/" id="brandName"><span class="fw-bold">GYMFIT</span></a>
+          <Link to="/" id="brandName"><span className="fw-bold">GYMFIT</span></Link>
 
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
-              <ul class="navbar-nav">
-                  <Link class="nav-item">
-                      <a class="nav-link" aria-current="page" href="/">Exercises</a>
+          <div className="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
+              <ul className="navbar-nav">
+                  <Link className="nav-item nav-link" to="/exercises">
+                    Exercises
                   </Link>
-                  <Link class="nav-item">
-                      <a class="nav-link" href="/">BMI</a>
+                  <Link className="nav-item nav-link" to="/">
+                      BMI
                   </Link>
-                  <Link class="nav-item">
-                      <a class="nav-link" href="/">Contact</a>
+                  <Link className="nav-item nav-link" to="/contact">
+                      Contact
                   </Link>
               </ul>
           </div>
