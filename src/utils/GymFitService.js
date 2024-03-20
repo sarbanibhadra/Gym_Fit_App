@@ -2,14 +2,13 @@
 Placing all API logic in one file GymFitService.js will provide better organization of the code.
 All functions will be available from one place.
  */
-
-const axios = require('axios');
+import { default as request } from "axios";
 
 // Base URL for GymFit API
 const BASE_URL = 'https://gym-fit.p.rapidapi.com';
 
 // API key and host for Gym Fit API
-const apiKey = '1b720ab7bfmshc6c66e1709299d4p1810e3jsn68191f2e37b2';
+const apiKey = '05068b6f42msh932569126a3931dp16a37bjsn108bbdc77e6f';
 const host = 'gym-fit.p.rapidapi.com';
 
 // Headers required for API requests
@@ -17,6 +16,12 @@ const headers = {
     'X-RapidAPI-Key': apiKey,
     'X-RapidAPI-Host': host
 };
+
+const params = {
+    number: '8',
+    bodyPart: 'Legs',
+    offset: '5'
+  };
 
 /**
  * Retrieves a list of body parts.
@@ -41,7 +46,7 @@ async function getBodyParts() {
     };
 
     try {
-        const response = await axios.request(options);
+        const response = await request(options);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -76,7 +81,7 @@ async function getBodyPartById(id) {
             url: `${BASE_URL}/body-parts/body-part/${id}`,
             headers: headers
         };
-        const response = await axios.request(options);
+        const response = await request(options);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -99,16 +104,18 @@ async function getBodyPartById(id) {
  *     "bodyParts": []            // List of associated body parts
  *   }
  */
-async function searchExercises(params = {}) {
+async function searchExercises(param = {}) {
     try {
+        params.bodyPart = param;
         const options = {
             method: 'GET',
             url: `${BASE_URL}/exercises/search`,
             headers: headers,
             params: params
         };
-        const response = await axios.request(options);
-        return response.data;
+        const response = await request(options);
+        console.log(response);
+        return response;
     } catch (error) {
         console.error(error);
         throw new Error('Failed to search for exercises');
@@ -157,7 +164,7 @@ async function getExerciseById(id) {
     };
 
     try {
-        const response = await axios.request(options);
+        const response = await request(options);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -197,7 +204,7 @@ async function searchMuscles(params = {}) {
             headers: headers,
             params: params
         };
-        const response = await axios.request(options);
+        const response = await request(options);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -237,7 +244,7 @@ async function getMuscleById(id) {
     };
 
     try {
-        const response = await axios.request(options);
+        const response = await request(options);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -269,7 +276,7 @@ async function getBmi(weight, height) {
     };
 
     try {
-        const response = await axios.request(options);
+        const response = await request(options);
         return response.data;
     } catch (error) {
         console.error(error);
@@ -277,7 +284,7 @@ async function getBmi(weight, height) {
     }
 }
 
-module.exports = {
+export default {
     getBodyParts,
     getBodyPartById,
     searchExercises,
