@@ -20,11 +20,11 @@ export default function Success() {
     return(
         
         <m.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1, delay: 1}} exit={{opacity: 0}} >
-            <main className="flex justify-center contact-container flex-wrap align-center">
-                <div className='background success-container'>
-                    <h2>Thank you for your message <span className='red'>{searchParams.get('name')}.</span></h2>
-                    <p>We have sent you an email to {searchParams.get('email')}. We will get back to you as soon as possible!</p>
-                    <button onClick={() => navigate(-1)}>Home page</button>
+            <main className="flex contact-container flex-wrap">
+                <div className='background success-container flex'>
+                    <h2 id='success-h2'>Thank you for your message <span className='red'>{searchParams.get('name')}.</span></h2>
+                    <p id='success-p'>We have sent you an email to {searchParams.get('email')}. We will get back to you as soon as possible!</p>
+                    <button id='success-button' onClick={() => navigate(-1)}>Home page</button>
                 </div>
             </main>
             <Confetti gravity={0.2} numberOfPieces={pieces} />
