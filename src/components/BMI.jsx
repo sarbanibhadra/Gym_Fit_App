@@ -10,7 +10,7 @@ function BMI() {
   const [weight,setWeight] = useState(0)
   const [height,setHeight] = useState(0)
   const [result,setResult] = useState("")
-  const [message,setMessage] = useState("")
+  const [text,setText] = useState("")
 
 
 const handleFormSubmit = (event) => {
@@ -24,11 +24,11 @@ const handleFormSubmit = (event) => {
   }
 
   if (result < 18.5) {
-    setMessage("Underweight");
+    setText("Underweight");
   } else if (result > 18.5 && result < 25) {
-    setMessage("Healthy weight");
+    setText("Healthy weight");
   } else {
-    setMessage("Overweight");
+    setText("Overweight");
   }
 }
 
@@ -53,9 +53,9 @@ let imgContainer = ""
     <div className="calculator">
       <h2 className="mainText">A journey towards healthier weight and lifestyle</h2>
       <div className="container">
-        <div className="row">
+        <div className="row gy-4 justify-content-center">
 
-          <div className="col-md-3 col-sm-6 bmi">
+          <div className="col-6 col-sm-6 col-md-4 col-lg-3 p-3 bmi">
             <h3 className="bmiHeader">BMI Calculator</h3>
 
             <form onSubmit={handleFormSubmit}>
@@ -73,13 +73,14 @@ let imgContainer = ""
             </form>
 
             <div className="result">
-              <h4 className="bmiHeader">Your BMI is: {result} </h4>
-              <h5 className="bmiHeader">{message}</h5>
+              <h4 className="bmiHeader">Your BMI is: </h4>
+              <h4 className="bmiHeader resultColor">{result} </h4>
+              <h5 className="bmiHeader">{text}</h5>
             </div>
           </div>
 
-          <div className="col-md-9 col-sm-6 image">
-            <img src={imgContainer} alt="" className="imgResult" width="100%"></img>
+          <div className="col-sm-12 col-md-8 col-lg-8 image">
+            <img src={imgContainer} alt="" className="imgResult" width="100%" ></img>
           </div>
 
 

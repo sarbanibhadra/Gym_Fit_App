@@ -4,7 +4,7 @@
 }
 
 .bmi {
-    box-shadow: 0px 0px 12px rgba(72, 190, 12, 0.823);
+    box-shadow: 0px 0px 15px rgba(72, 190, 12, 0.823);
     border-radius: 5px;
     padding: 1.2em;  
 }
@@ -16,10 +16,6 @@
 
 .bmiHeader {
     text-align: center;
-}
-.image {
-    height: auto;
-    width: 100%;
 }
 
 .mainText {
@@ -33,8 +29,11 @@
     border-radius: 8px;
     background-size: cover;
     background-position: center;
-    height: auto;
-    width: 100%;
-    box-shadow: 0px 0px 12px black
-
+    height: 60vh;
+    box-shadow: 5px 5px 10px black;
 }
+
+.resultColor {
+    color: rgb(44, 161, 44);
+}
+
