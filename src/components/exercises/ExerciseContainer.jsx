@@ -5,7 +5,7 @@ import Row from '../Row';
 import Col from '../Col';
 import Card from '../Card';
 import ExerciseSearchForm from '../ExerciseSearchForm';
-import SearchResults from '../SearchResults';
+import SearchResults from '../ExerciseSearchResults';
 
 import API from '../../utils/GymFitService';
 //const API = require('../utils/GymFitService');
@@ -31,16 +31,6 @@ function ExerciseContainer() {
           cleanData.push({...obj, instructions: ress.instructions})          
         }
         setSearchData({ ...searchData, results: cleanData  , error: '' });
-      //   API.getExerciseById('47f7aba8-991c-44eb-86bc-5a47fba335aa')
-      //   .then((res) => {
-      //     if (res.data.status === 'error') {
-      //       throw new Error(res.data.message);
-      //     }
-          
-      //   })
-      //   .catch((err) => setSearchData({ ...searchData, error: err.message }));
-      //  })
-      // .catch((err) => setSearchData({ ...searchData, error: err.message }));
   };
 
   return (
