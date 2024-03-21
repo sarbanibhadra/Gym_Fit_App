@@ -5,7 +5,7 @@ import Row from '../Row';
 import Col from '../Col';
 import Card from '../Card';
 import ExerciseSearchForm from '../ExerciseSearchForm';
-import SearchResults from  '../ExerciseSearchResults';
+import ExSearchResults from  '../ExerciseSearchResults';
 
 import API from '../../utils/GymFitService';
 //const API = require('../utils/GymFitService');
@@ -42,7 +42,7 @@ function ExerciseContainer() {
           handleInputChange={handleInputChange}
           exercise={searchData.exercise}
         />
-        <SearchResults results={searchData.results} />
+        <ExSearchResults results={searchData.results} />
       </Container>
     </div>
   );
