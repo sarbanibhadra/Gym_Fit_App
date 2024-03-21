@@ -5,7 +5,7 @@ import Footer from "./components/Footer.jsx"
 import Contact from "./components/contact/Contact.jsx"
 import Success from "./components/contact/Success.jsx"
 import BMI from "./components/BMI.jsx"
-import Exercises from "./components/exercises/index.jsx"
+import Exercises from "./components/exercises/ExerciseContainer.jsx"
 
 
 function App() {
