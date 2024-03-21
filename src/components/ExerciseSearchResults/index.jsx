@@ -17,7 +17,7 @@ function ExSearchResults(props) {
               <ul>  
                 {result.instructions.map( obj => (
                   <li key={obj.order}>
-                  {obj.description}
+                  {obj.description} 
                   </li>
                 ))}
               </ul>
