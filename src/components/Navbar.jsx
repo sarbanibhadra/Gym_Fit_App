@@ -17,14 +17,14 @@ const Navbar = () => {
           </button>
 
           <div className="collapse navbar-collapse justify-content-end align-center" id="navbarNav">
-              <ul className="navbar-nav">
-                  <Link className="nav-item nav-link" to="/exercises">
+              <ul className="navbar-nav navColor">
+                  < Link className="nav-item nav-link navColor" to="/exercises">
                     Exercises
                   </Link>
-                  <Link className="nav-item nav-link" to="/">
+                  <Link className="nav-item nav-link navColor" to="/">
                       BMI
                   </Link>
-                  <Link className="nav-item nav-link" to="/contact">
+                  <Link className="nav-item nav-link navColor" to="/contact">
                       Contact
                   </Link>
               </ul>

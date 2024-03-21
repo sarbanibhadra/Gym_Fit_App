@@ -8,8 +8,8 @@
     
 }
 
-.nav-item a:hover {
-    color: rgb(226, 16, 16);
+.navColor:hover {
+    color: rgb(226, 16, 16)!important;
 
 }
 
