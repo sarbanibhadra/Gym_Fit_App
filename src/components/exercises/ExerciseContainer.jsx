@@ -5,7 +5,7 @@ import Row from '../Row';
 import Col from '../Col';
 import Card from '../Card';
 import ExerciseSearchForm from '../ExerciseSearchForm';
-import SearchResults from '../ExerciseSearchResults';
+import SearchResults from  '../ExerciseSearchResults';
 
 import API from '../../utils/GymFitService';
 //const API = require('../utils/GymFitService');
