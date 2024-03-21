@@ -40,8 +40,9 @@ This application calculates your BMI for you and provides you to workout program
 
 ## Demo Photos
 
-Photos will add!!!!
-
+![Alt text](<Screenshot 2024-03-21 at 21.14.56.png>)
+![Alt text](<Screenshot 2024-03-21 at 21.16.09.png>)
+![Alt text](<Screenshot 2024-03-21 at 21.17.03.png>)
 
 ## License
 
@@ -56,8 +57,6 @@ This application has MIT License.
 - Volodymyr SHTYKA
 - Yusuf Sercan YILDIZ
 
- Deployed: 
-
  Git Repo: https://github.com/sarbanibhadra/Gym_Fit_App
 
- Netlify: 
+ Netlify: https://main--gym-fit-app-main.netlify.app/
