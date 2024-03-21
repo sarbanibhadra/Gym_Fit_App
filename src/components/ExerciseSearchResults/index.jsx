@@ -16,7 +16,7 @@ function ExSearchResults(props) {
             <Card.Text>
               <ul>  
                 {result.instructions.map( obj => (
-                  <li key={obj.order}>
+                  <li key={obj.order}> 
                   {obj.description} 
                   </li>
                 ))}
