@@ -37,6 +37,7 @@ This application calculates your BMI for you and provides you to workout program
 - **[React Confetti](https://www.npmjs.com/package/react-confetti)**: A component for creating confetti effects in React applications.
 - **[Jest](https://jestjs.io/)**: A JavaScript testing framework.
 - **[Eslint](https://eslint.org/)**: A static code analysis tool for identifying problematic patterns in JavaScript code.
+- **[Gym Fit API](https://rapidapi.com/BastienCarcat/api/gym-fit)**: An API for fitness-related data.
 
 ## Demo Photos
 
