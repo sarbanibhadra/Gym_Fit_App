@@ -18,9 +18,7 @@ createRoutesFromElements(
     <Route path="/exercises" element={<Exercises />}/>
   </Route>
 )
-
 )
-
 
   return (
     <>

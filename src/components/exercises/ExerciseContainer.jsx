@@ -1,13 +1,13 @@
 // Work in progress, please dont use it yet!! Thank you
 import React, { useState } from 'react';
-import Container from './Container';
-import Row from './Row';
-import Col from './Col';
-import Card from './Card';
-import ExerciseSearchForm from './ExerciseSearchForm';
-import SearchResults from './SearchResults';
+import Container from  '../Container';
+import Row from '../Row';
+import Col from '../Col';
+import Card from '../Card';
+import ExerciseSearchForm from '../ExerciseSearchForm';
+import SearchResults from '../SearchResults';
 
-import API from '../utils/GymFitService';
+import API from '../../utils/GymFitService';
 //const API = require('../utils/GymFitService');
 
 function ExerciseContainer() {
