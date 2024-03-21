@@ -1,9 +1,11 @@
 import React, {useState} from "react";
 import "../styles/BMI.css"
 import wolf from "../images/joshua-wilking-bgSKRrYFYxc-unsplash 1.jpg"
-import cat from "../images/mathieu-odin-YeQIAysCP3w-unsplash.jpg"
-import dog from "../images/lucrezia-carnelos-0liYTl4dJxk-unsplash.jpg"
+import meercat from "../images/dusan-veverkolog-ah7KHxYg6Ow-unsplash 1.jpg"
+import dog from "../images/jorge-zapata-_siAu79dnBk-unsplash 1.jpg"
 import girl from "../images/alex-shaw-wJGhAhqvUaQ-unsplash.jpg"
+
+
 
 function BMI() {
 
@@ -18,14 +20,14 @@ const handleFormSubmit = (event) => {
   event.preventDefault();
 
   if (weight && height) {
-    let result = weight/(height * height)
-    setResult(result.toFixed(1))
+    let result = (weight/(height * height)).toFixed(1)
+    setResult(result)
    
   }
 
   if (result < 18.5) {
     setText("Underweight");
-  } else if (result > 18.5 && result < 25) {
+  } else if (result >= 18.5 && result <= 25) {
     setText("Healthy weight");
   } else {
     setText("Overweight");
@@ -37,7 +39,7 @@ let imgContainer = ""
   if (result > 1 && result < 18.5) {
     imgContainer = wolf
   } else if (result > 18.5 && result <= 25) {
-    imgContainer = cat
+    imgContainer = meercat
   } else if (result > 25) {
     imgContainer = dog
   } else {
