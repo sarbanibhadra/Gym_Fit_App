@@ -8,7 +8,7 @@ import { default as request } from "axios";
 const BASE_URL = 'https://gym-fit.p.rapidapi.com';
 
 // API key and host for Gym Fit API
-const apiKey = '05068b6f42msh932569126a3931dp16a37bjsn108bbdc77e6f';
+const apiKey = '5b3f0c361emsh2a4d578e9d1e59bp14a035jsn9d2084af6d47';
 const host = 'gym-fit.p.rapidapi.com';
 
 // Headers required for API requests
