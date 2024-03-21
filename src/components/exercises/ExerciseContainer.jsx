@@ -34,7 +34,7 @@ function ExerciseContainer() {
   };
 
   return (
-    <div style={{marginTop: "5%", marginBottom: "3%" }}>
+    <div style={{marginTop: "4%", marginBottom: "3%" }}>
       <Container style={{ minHeight: '50%', minWidth: '40%'}} >
       <Row>
         <Col>
