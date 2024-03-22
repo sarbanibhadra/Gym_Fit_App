@@ -60,4 +60,4 @@ This application has MIT License.
 
  Git Repo: https://github.com/sarbanibhadra/Gym_Fit_App
 
- Netlify: https://main--gym-fit-app-main.netlify.app/
+ Netlify: https://stirring-bonbon-794de4.netlify.app/
