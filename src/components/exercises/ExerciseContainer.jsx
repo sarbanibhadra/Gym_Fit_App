@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Container from '../Container';
 import ExSearchForm from '../ExerciseSearchForm';
 import ExSearchResults from  '../ExerciseSearchResults';
+import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
@@ -18,23 +19,26 @@ function ExerciseContainer() {
 
   const handleInputChange = async (event) => {
     event.preventDefault();
-    
-    const res = await API.searchExercises(event.target.value)
-      // .then((res) => {
-        if (res.data.status === 'error') {
-          throw new Error(res.data.message);
-        }
-        const cleanData = [];
-        for (const obj of res.data) {
-          const ress = await API.getExerciseById(obj.id)
-          //const image = await API.getExerciseImage(obj.name)
-          cleanData.push({...obj, instructions: ress.instructions})          
-        }
-        setSearchData({ ...searchData, results: cleanData  , error: '' });
+    const response = await API.searchExercises(event.target.value)
+
+    console.log("res" , response)
+      if (response.status === 'error') {
+        throw new Error(response.data.message);
+      }
+      const cleanData = [];
+      for (const obj of response.data) {
+        console.log(obj)
+        const ress = await API.getExerciseById(obj.id)
+        const imageEx = await API.getExerciseImage(obj.name + ' exercise')
+        console.log(imageEx)
+        cleanData.push({...obj, instructions: ress.instructions, images: imageEx.value[2].contentUrl})   
+        console.log(cleanData)       
+      }
+      setSearchData({ ...searchData, results: cleanData  , error: '' });
   };
 
   return (
-    <div style={{marginTop: "4%", marginBottom: "3%" }}>
+    <div style={{marginTop: "4%"}}>
       <Container style={{ minHeight: '50%', minWidth: '40%'}} >
       <Row>
         <Col>
@@ -43,12 +47,12 @@ function ExerciseContainer() {
         </Col>
       </Row>
       <Row>
-        <Col sm={4}>
+        <Col sm={3}>
         <ExSearchForm
           handleInputChange={handleInputChange}
           exercise={searchData.exercise} />
         </Col>
-        <Col sm={8}>
+        <Col sm={9}>
         <ExSearchResults results={searchData.results} />
         </Col>
       </Row>
