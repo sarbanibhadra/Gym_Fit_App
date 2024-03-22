@@ -23,17 +23,17 @@ function ExSearchResults(props) {
             </Card.Text>
           </Card.Body>
         </Card> */}
-          <div ClassName="card shadow p-3 mb-5 bg-white rounded" style={{width: '25rem', height: '30rem', backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/slides/002.webp')"}}>
+          <div ClassName="card shadow p-3 mb-5 bg-white rounded" style={{width: '25rem', height: '30rem', borderRadius: '8px', backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/slides/002.webp')"}}>
             <div ClassName="card-body p-3 text-white">
               <h5 class="card-title">{result.name}</h5>
               <p class="card-text">
-              <ul>  
+              <ol>  
                 {result.instructions.map( obj => (
-                  <li key={obj.order}>
+                  <li className="listPadding" key={obj.order}>
                   {obj.description}
                   </li>
                 ))}
-              </ul>
+              </ol>
               </p>
             </div>
           </div>

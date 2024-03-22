@@ -67,7 +67,7 @@ export default function Contact(){
             <div className='flex contact-container'>
                 <form ref={form} onSubmit={formik.handleSubmit} className='flex background contact-form'>
                     <div className='contact-left-dev flex'>
-                        <h1 id='get-in-touch-contact'>Get in touch 👋</h1>
+                        <h1 id='get-in-touch-contact' className="pt-2">Get in touch 👋</h1>
                         <div className='form-inputs-div-container'>
                             {/* Name */}
                             <div className='form-input-div'>
@@ -129,7 +129,7 @@ export default function Contact(){
                             </div>
                               {/* Submit */}
                               <div className='form-input-div'>
-                                <button className='submit'  id="Submit-button" type='submit'>submit</button>
+                                <button className='submit'  id="Submit-button" type='submit'>Submit</button>
                             </div>
 
                         </div>
