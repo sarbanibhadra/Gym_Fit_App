@@ -9,7 +9,7 @@ function ExSearchForm(props) {
       <div>
         <select 
           value={props.search}
-          onChange={props.handleInputChange}
+          onChange={props.handleInputChange} 
           name="breed"
           list="breeds" 
           className="form-select" 

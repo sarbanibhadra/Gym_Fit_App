@@ -1,16 +1,19 @@
 import React from "react";
 import "./style.css";
+import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
 function ExSearchResults(props) {
-  console.log(props.results)
+  console.log(props.results);
+  
   return (
     <Row xs={1} md={2} className="g-4">
       {props.results.map(result => (
         <Col key={result.id}>
-        {/* <Card style={{ width: '25rem', height: '30rem' }} border="info" >
-          <Card.Body>
+        <Card ClassName="img-fluid shadow" style={{ width: '28rem', height: '40rem' }} border="info" >
+          <img ClassName="card-img-top img-fluid" src={result.images} alt="Card image not available" style={{maxWidth: "100%", maxHeight: "50%"}}/>
+          <Card.Body ClassName="card-img-overlay">
             <Card.Title>{result.name}</Card.Title>
             <Card.Text>
               <ul>  
@@ -22,21 +25,22 @@ function ExSearchResults(props) {
               </ul>
             </Card.Text>
           </Card.Body>
-        </Card> */}
-          <div ClassName="card shadow p-3 mb-5 bg-white rounded" style={{width: '25rem', height: '30rem', borderRadius: '8px', backgroundImage: "url('https://mdbcdn.b-cdn.net/img/new/slides/002.webp')"}}>
-            <div ClassName="card-body p-3 text-white">
-              <h5 class="card-title">{result.name}</h5>
-              <p class="card-text">
-              <ol>  
+        </Card>
+          {/* <div ClassName="card img-fluid shadow" style={{width: '30rem', height: '40rem'}}>
+          <img ClassName="card-img-top" src={result.images} alt="Card image" style={{width: "100%"}}/>
+            <div ClassName="card-img-overlay">
+              <h4 ClassName="card-title">{result.name}</h4>
+              <p ClassName="card-text">
+              <ul>  
                 {result.instructions.map( obj => (
-                  <li className="listPadding" key={obj.order}>
+                  <li key={obj.order}>
                   {obj.description}
                   </li>
                 ))}
-              </ol>
+              </ul> 
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <img alt="Dog" src={result} className="img-fluid" /> */}
         </Col>
       ))}
