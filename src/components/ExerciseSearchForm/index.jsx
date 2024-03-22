@@ -1,5 +1,5 @@
 import React from 'react';
-import fb from './fullbody1.jpg'
+import fb from './full-body.jpg'
 import './style.css';
 
 // Using the datalist element we can create autofill suggestions based on the props.breeds array
