@@ -39,20 +39,20 @@ function Footer() {
                             CONTACT US
                         </div>
                         <ul className="list-unstyled">
-                            <li><i className="fa-solid fa-location-dot"></i><a href="#">London</a></li>
+                            <li><i className="fa-solid fa-location-dot"></i><a href="#"> London</a></li>
                             <li><i className="fa-solid fa-envelope"></i> <a href="mailto:info@gymfit.com">info@gymfit.com</a></li>
-                            <li><i className="fa-solid fa-phone"></i><a href="tel:9051290512">+447712356789</a></li>
+                            <li><i className="fa-solid fa-phone"></i><a href="tel:9051290512"> +447712356789</a></li>
                         </ul>
                     </div>
 
-                    <div className="col-md-4 col-lg-3">
+                    <div className="col-md-4 col-lg-3"> 
                     <div className="title">
-                            SOCIAL MEDIA
+                            SOCIAL MEDIA 
                         </div>
                         <ul className="list-unstyled">
-                            <li><a href="https://www.facebook.com/" className="facebook"><i className="fa-brands fa-facebook-f"></i>Facebook</a></li>
-                            <li><a href="https://www.instagram.com/" className="instagram"><i className="fa-brands fa-instagram"></i>Instagram</a></li>
-                            <li><a href="https://twitter.com/?lang=en" className="twitter"><i className="fa-brands fa-x-twitter"></i>Twitter</a></li>
+                            <li><i className="fa-brands fa-facebook-f"></i><a href="https://www.facebook.com/" className="facebook"> Facebook</a></li>
+                            <li><i className="fa-brands fa-instagram"></i><a href="https://www.instagram.com/" className="instagram"> Instagram</a></li>
+                            <li><i className="fa-brands fa-x-twitter"></i><a href="https://twitter.com/?lang=en" className="twitter"> Twitter</a></li>
                         </ul>
                     </div>
 

@@ -1,5 +1,5 @@
 form.search {
-  overflow: auto;
+  /* overflow: auto; */
   margin-bottom: 10px;
 }
 
@@ -7,3 +7,9 @@ form.search button[type="submit"] {
   float: right;
   margin-top: 10px;
 }
+
+/* added rounded corners to the image */
+.img-fluid {
+  border-radius: 8px;
+}
+
