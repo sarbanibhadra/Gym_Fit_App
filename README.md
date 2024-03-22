@@ -37,11 +37,13 @@ This application calculates your BMI for you and provides you to workout program
 - **[React Confetti](https://www.npmjs.com/package/react-confetti)**: A component for creating confetti effects in React applications.
 - **[Jest](https://jestjs.io/)**: A JavaScript testing framework.
 - **[Eslint](https://eslint.org/)**: A static code analysis tool for identifying problematic patterns in JavaScript code.
+- **[Gym Fit API](https://rapidapi.com/BastienCarcat/api/gym-fit)**: An API for fitness-related data.
 
 ## Demo Photos
 
-Photos will add!!!!
-
+![Alt text](<Screenshot 2024-03-21 at 21.14.56.png>)
+![Alt text](<Screenshot 2024-03-21 at 21.16.09.png>)
+![Alt text](<Screenshot 2024-03-21 at 21.17.03.png>)
 
 ## License
 
@@ -56,8 +58,6 @@ This application has MIT License.
 - Volodymyr SHTYKA
 - Yusuf Sercan YILDIZ
 
- Deployed: 
-
  Git Repo: https://github.com/sarbanibhadra/Gym_Fit_App
 
- Netlify: 
+ Netlify: https://main--gym-fit-app-main.netlify.app/

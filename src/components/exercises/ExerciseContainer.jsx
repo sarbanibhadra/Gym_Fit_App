@@ -42,7 +42,8 @@ function ExerciseContainer() {
       <Container style={{ minHeight: '50%', minWidth: '40%'}} >
       <Row>
         <Col>
-        <h1 className="text-center">Search By Exercise</h1>
+        {/* i've added some padding */}
+        <h1 className="text-center pt-5 pb-3">Search by Exercise</h1>
         </Col>
       </Row>
       <Row>

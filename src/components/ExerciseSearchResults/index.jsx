@@ -32,12 +32,12 @@ function ExSearchResults(props) {
               <h4 ClassName="card-title">{result.name}</h4>
               <p ClassName="card-text">
               <ul>  
-                {result.instructions.map( obj => (
-                  <li key={obj.order}>
+                  {result.instructions.map( obj => (
+                  <li className="listPadding" key={obj.order}>
                   {obj.description}
                   </li>
                 ))}
-              </ul>
+              </ol>
               </p>
             </div>
           </div> */}

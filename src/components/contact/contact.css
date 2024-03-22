@@ -2,16 +2,20 @@
 .background{background-color: rgb(0, 0, 0);}
 .text-red{color: rgb(150, 50, 50);}
 .contact-container{
-    margin-top: 4.3rem;
+    padding-top: 4rem;
+    margin-top: 4.1rem;
+    margin-bottom: 1rem;
     width: 100%;
-    max-height: 550px;
-    height: 550px;
+    max-height: 570px;
+    height: 570px;
     justify-content: center;
 }
 .contact-form{
-    width: 80%;
-    border-radius: 1.2rem;
+    width: 81%;
+    /* border-radius: 1.2rem; */
+    border-radius: 8px;
     justify-content: center;
+    margin: 20px;
  }
 .contact-left-dev{
     width: 60%;
@@ -27,7 +31,7 @@
 .contact-image{height:100%; width: 100%;  border-radius: 1.2rem;}
 #get-in-touch-contact{
     padding-bottom: 0.1rem;
-    font-family: "Girassol", serif;
+    /* font-family: "Girassol", serif; */
     font-weight: 700;
     color: white;
       
@@ -46,19 +50,22 @@
 }
 
 .label{
-    font-family: "Eczar", serif;
+    /* font-family: "Eczar", serif; */
     padding-top: 10px;
     font-weight: 500;
     font-size: 1.2rem;
     color: white;
 }
 .input-fields{
-    width: 50%;
-    border: 2px solid;
+    width: 52%;
+    /* width: 50%; */
+    /* border: 2px solid; */
+    border: 1px solid;
     border-color: gray;
     border-radius: 0.2rem;
     background-color: inherit; 
     color: gray;
+    
 }
 .input-height{
     max-height: 2.1rem;
@@ -73,11 +80,12 @@
 
 .submit{
     width: 52%;
-    font-family: "Girassol", serif;
+    /* font-family: "Girassol", serif; */
     font-weight: 700;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
-    border-radius: 1.4rem;
+    /* border-radius: 1.4rem; */
+    border-radius: 8px;
     padding-bottom: 0.7rem;
     padding-top: 0.5rem;
     margin-top: 1rem;
@@ -124,8 +132,8 @@
         align-items: center;
     }
     .form-image-div{
-        width: 450px;
-        height: 600px;
+        /* width: 450px; */
+        height: 300px;
         margin: 0 auto;
     }
     .contact-image{height:100%; width: 100%;}

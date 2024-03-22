@@ -1,49 +1,56 @@
 import React, {useState} from "react";
 import "../styles/BMI.css"
 import wolf from "../images/joshua-wilking-bgSKRrYFYxc-unsplash 1.jpg"
-import cat from "../images/mathieu-odin-YeQIAysCP3w-unsplash.jpg"
-import dog from "../images/lucrezia-carnelos-0liYTl4dJxk-unsplash.jpg"
+import meercat from "../images/dusan-veverkolog-ah7KHxYg6Ow-unsplash 1.jpg"
+import dog from "../images/jorge-zapata-_siAu79dnBk-unsplash 1.jpg"
 import girl from "../images/alex-shaw-wJGhAhqvUaQ-unsplash.jpg"
+
+
 
 function BMI() {
 
-  const [weight,setWeight] = useState(0)
-  const [height,setHeight] = useState(0)
+  const [weight,setWeight] = useState("")
+  const [height,setHeight] = useState("")
   const [result,setResult] = useState("")
   const [text,setText] = useState("")
 
 
 const handleFormSubmit = (event) => {
-//   // Preventing the default behavior of the form submit (which is to refresh the page)
+// Preventing the default behavior of the form submit (which is to refresh the page)
   event.preventDefault();
 
-  if (weight && height) {
-    let result = weight/(height * height)
-    setResult(result.toFixed(1))
-   
+    if (weight && height) {
+      let result = (weight*10000/(height * height)).toFixed(1)
+      setResult(result)
+    
+
+      if (result < 18.5) {
+      setText("Underweight");
+      } else if (result >= 18.5 && result <= 25) {
+      setText("Healthy weight");
+      } else {
+      setText("Overweight");
+      } 
+    }  else {
+      setText("");
+      setResult("");
+  
+    }
   }
 
-  if (result < 18.5) {
-    setText("Underweight");
-  } else if (result > 18.5 && result < 25) {
-    setText("Healthy weight");
-  } else {
-    setText("Overweight");
-  }
-}
 
-
-let imgContainer = ""
-  if (result > 1 && result < 18.5) {
-    imgContainer = wolf
-  } else if (result > 18.5 && result <= 25) {
-    imgContainer = cat
-  } else if (result > 25) {
-    imgContainer = dog
-  } else {
-    imgContainer = girl
-  }
-
+  let imgContainer = ""
+    if (result > 1 && result < 18.5) {
+      imgContainer = wolf
+    } else if (result > 18.5 && result <= 25) {
+      imgContainer = meercat
+    } else if (result > 25) {
+      imgContainer = dog
+    } else {
+      imgContainer = girl
+    }
+  
+  
 
 
 
@@ -65,8 +72,8 @@ let imgContainer = ""
               </div>
  
               <div className="mb-3">
-                <label for="InputHeight" className="form-label">Height (m)</label>
-                <input value={height} onChange={(e) => setHeight(e.target.value)} className="form-control" id="InputHeight" type="" />
+                <label for="InputHeight" className="form-label">Height (cm)</label>
+                <input value={height} onChange={(e) => setHeight(e.target.value)} className="form-control" id="InputHeight" type="number" />
               </div>
 
               <button type="submit" onClick={handleFormSubmit} className="btn btn-md btn-dark bmibtn" >Submit</button>
