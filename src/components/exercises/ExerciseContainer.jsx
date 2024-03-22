@@ -17,24 +17,24 @@ function ExerciseContainer() {
     error: '',
   });
 
-  const handleInputChange = async (event) => {
+  const handleInputChange = async (event) => {  
     event.preventDefault();
     const response = await API.searchExercises(event.target.value)
 
-    console.log("res" , response)
-      if (response.status === 'error') {
-        throw new Error(response.data.message);
-      }
-      const cleanData = [];
-      for (const obj of response.data) {
-        console.log(obj)
-        const ress = await API.getExerciseById(obj.id)
-        const imageEx = await API.getExerciseImage(obj.name + ' exercise')
-        console.log(imageEx)
-        cleanData.push({...obj, instructions: ress.instructions, images: imageEx.value[2].contentUrl})   
-        console.log(cleanData)       
-      }
-      setSearchData({ ...searchData, results: cleanData  , error: '' });
+        console.log("res" , response)
+        if (response.status === 'error') {
+          throw new Error(response.data.message);
+        }
+        const cleanData = [];
+        for (const obj of response.data) {
+          console.log(obj)
+          const ress = await API.getExerciseById(obj.id)
+          const imageEx = await API.getExerciseImage(obj.name + ' exercise')
+          console.log(imageEx)
+          cleanData.push({...obj, instructions: ress.instructions, images: imageEx.value[2].contentUrl})   
+          console.log(cleanData)       
+        }
+        setSearchData({ ...searchData, results: cleanData  , error: '' });
   };
 
   return (
@@ -42,8 +42,7 @@ function ExerciseContainer() {
       <Container style={{ minHeight: '50%', minWidth: '40%'}} >
       <Row>
         <Col>
-        {/* i've added some padding */}
-        <h1 className="text-center pt-5 pb-3">Search by Exercise</h1>
+        <h1 className="text-center">Search By Exercise</h1>
         </Col>
       </Row>
       <Row>

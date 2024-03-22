@@ -7,9 +7,8 @@ import { default as request } from "axios";
 // Base URL for GymFit API
 const BASE_URL = 'https://gym-fit.p.rapidapi.com';
 
-
 // API key and host for Gym Fit API
-const apiKey = '5b3f0c361emsh2a4d578e9d1e59bp14a035jsn9d2084af6d47';
+const apiKey = '7365a47a10msh0726b41eee8b7ebp14cdeejsnb30f4ca67a44';
 const host = 'gym-fit.p.rapidapi.com';
 
 // Headers required for API requests
@@ -19,9 +18,26 @@ const headers = {
 };
 
 const params = {
-    number: '8',
+    number: '6',
     bodyPart: 'Legs',
     offset: '5'
+  };
+
+// Base URL for GymFit Img API
+const BASE_URL_IMG = 'https://images-search1.p.rapidapi.com';
+
+// API key and host for Gym Fit Image API
+const apiKeyImg = '7365a47a10msh0726b41eee8b7ebp14cdeejsnb30f4ca67a44';
+const hostImg = 'images-search1.p.rapidapi.com';
+
+// Headers required for Image API requests
+const headersImg = {
+    'X-RapidAPI-Key': apiKeyImg,
+    'X-RapidAPI-Host': hostImg
+};
+
+const paramsImg = {
+    q: 'chin pull exercise'
   };
 
 /**
@@ -53,7 +69,7 @@ async function getBodyParts() {
         console.error(error);
         return [];
     }
-}
+} 
 
 /**
  * Retrieves information about a body part by its ID.
@@ -91,6 +107,38 @@ async function getBodyPartById(id) {
 }
 
 /**
+ * Retrieves image of an exercise by its name.
+ *
+ * @param {string} term - The name of the exercise image to retrieve.
+ * @returns {Object} Information about the body part, including its name and associated muscles.
+
+ * @throws {Error} If failed to retrieve body part.
+ */
+async function getExerciseImage(term) {
+    console.log(term)
+    if (!term || typeof term !== 'string') {
+        throw new Error('Image search term is required and must be a string');
+    }
+    paramsImg.q = term
+    try {
+        const options = {
+            method: 'GET',
+            url: `https://images-search1.p.rapidapi.com/search/`,
+            params: paramsImg,
+            headers: headersImg
+            
+        };
+        console.log(options)
+        const response = await request(options);
+        return response.data;
+    } catch (error) {
+        console.error(error);
+        throw new Error('Failed to retrieve exercise image');
+    }
+}
+
+
+/**
  * Searches for exercises based on optional parameters.
  *
  * @param {Object} [params] - Optional parameters for the search.
@@ -115,7 +163,7 @@ async function searchExercises(param = {}) {
             params: params
         };
         const response = await request(options);
-        console.log(response);
+        console.log("response1", response);
         return response;
     } catch (error) {
         console.error(error);
@@ -288,6 +336,7 @@ async function getBmi(weight, height) {
 export default {
     getBodyParts,
     getBodyPartById,
+    getExerciseImage,
     searchExercises,
     getExerciseById,
     searchMuscles,
