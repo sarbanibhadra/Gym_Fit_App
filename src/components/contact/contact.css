@@ -11,12 +11,10 @@
     justify-content: center;
 }
 .contact-form{
-    width: 81%;
-    /* border-radius: 1.2rem; */
-    border-radius: 8px;
+    width: 80%;
+    border-radius: 1.2rem;
     justify-content: center;
-    margin: 20px;
- }
+}
 .contact-left-dev{
     width: 60%;
     height: 100%;
@@ -31,7 +29,7 @@
 .contact-image{height:100%; width: 100%;  border-radius: 1.2rem;}
 #get-in-touch-contact{
     padding-bottom: 0.1rem;
-    /* font-family: "Girassol", serif; */
+    font-family: "Girassol", serif;
     font-weight: 700;
     color: white;
       
@@ -50,17 +48,15 @@
 }
 
 .label{
-    /* font-family: "Eczar", serif; */
+    font-family: "Eczar", serif;
     padding-top: 10px;
     font-weight: 500;
     font-size: 1.2rem;
     color: white;
 }
 .input-fields{
-    width: 52%;
-    /* width: 50%; */
-    /* border: 2px solid; */
-    border: 1px solid;
+    width: 50%;
+    border: 2px solid;
     border-color: gray;
     border-radius: 0.2rem;
     background-color: inherit; 
@@ -80,12 +76,11 @@
 
 .submit{
     width: 52%;
-    /* font-family: "Girassol", serif; */
+    font-family: "Girassol", serif;
     font-weight: 700;
     font-size: 1.2rem;
     letter-spacing: 0.1rem;
-    /* border-radius: 1.4rem; */
-    border-radius: 8px;
+    border-radius: 1.4rem;
     padding-bottom: 0.7rem;
     padding-top: 0.5rem;
     margin-top: 1rem;
@@ -112,7 +107,7 @@
 #success-h2, #success-p {color: white;}
 #success-button:hover{
     background-color:#dc3545;
-    border-radius: 1px solid #dc3545;;
+    border-radius: 1px solid #dc3545;
 }
 .flex-wrap{flex-wrap: wrap;}
 .red{color: rgb(200, 50, 20);}
